@@ -1,0 +1,38 @@
+<html lang="en">
+    <head>
+        <title>So Many Kale Recipes</title>
+        <script src="chsix.js"> </script>
+            
+    </head>
+    <body>
+        <header>
+            <h1>Above and Beyond the Kale of Duty</h1>
+        </header> 
+        <main>
+            <div id="kale-quotations">
+                <p>
+                    Do you love to cook with test <a href="kale.html">kale</a>?
+                </p> 
+            </div>
+        </main>
+        <script>
+            const userPrefs = {
+                bgColor: "darkolivegreen",
+                textColor: "antiquewhite",
+                textSize: "1.25em",
+                typeface: "Comic Sans",
+                resetDefaults: function() {
+                    document.body.style.backgroundColor = 'white';
+                    document.body.style.color = 'black';
+                    document.body.style.fontSize = '1em';
+                    document.body.style.fontFamily = 'initial';
+                }
+            };
+            document.body.style.backgroundColor = userPrefs.bgColor;
+            document.body.style.color = userPrefs.textColor;
+            document.body.style.fontSize = userPrefs.textSize;
+            document.body.style.fontFamily = userPrefs.typeface;
+            document.querySelector('button').addEventListener('click', userPrefs.resetDefaults);
+        </script>
+    </body>
+</html>

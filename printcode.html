@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Code Display</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" defer></script>
+</head>
+<body>
+    <h2>Example Code Snippet</h2>
+    <pre><code class="language-javascript">// JavaScript example
+        class Person 
+        {
+            // Private properties using the new # syntax
+            #name;
+            #age;
+          
+            constructor(name, age) 
+            {
+              this.#name = name;  // Private field
+              this.#age = age;    // Private field
+            }
+          
+            // Getter method for name
+            getName() 
+            {
+              return this.#name;
+            }
+          
+            // Setter method for name
+            setName(name) 
+            {
+              if (name && name.length > 0) 
+              {
+                this.#name = name;
+              } 
+              else 
+              {
+                document.write('Invalid name');
+              }
+            }
+          
+            // Getter method for age
+            getAge() {
+              return this.#age;
+            }
+          
+            // Setter method for age
+            setAge(age) {
+              if (age > 0 && age < 130) { // Simple validation
+                this.#age = age;
+              } else {
+                document.write('Invalid age');
+              }
+            }
+          
+            // Method to display person's details
+            displayPersonInfo() 
+            {
+              document.write("<br>", `Name: ${this.#name}`," ", `Age: ${this.#age}`, "<br>");
+            }
+          }
+          
+          // Using the Person class
+          const person1 = new Person('John', 30);
+          
+          // Accessing data using getter methods
+          document.write(person1.getName(), "<br>");  // Output: John
+          document.write(person1.getAge(), "<br>");   // Output: 30
+          
+          // Modifying data using setter methods
+          person1.setName('Alice');
+          person1.setAge(25);
+          
+          // Display updated information
+          person1.displayPersonInfo();  // Output: Name: Alice, Age: 25
+          
+          // Trying to access private fields directly (will throw an error)
+          //document.write(person1.#name);  // SyntaxError: Private field '#name' must be declared in an enclosing class
+          </code></pre>
+</body>
+</html>

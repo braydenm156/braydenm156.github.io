@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang = "en">
+    <head>
+        <meta charset = "utf-8">  
+        <title> Template </title> 
+        <link rel = "stylesheet" href="styles.css">
+    </head>
+    <body>
+        <header>
+            <button type="button" class="logo-button">  
+                <a href="main.html" ><img src="logo.webp" alt = "sit logo" width="40" height="40"></a>
+            </button> 
+        </header>
+        <nav>
+            <a href="main.html" class="button-class">Home</a>
+            <a href="template.html" class="button-class">Template</a>
+            <a href="aboutMe.html" class="button-class">About Me</a>
+            <a href="https://csmajors.owls.plus" class="button-class">CS Majors </a>
+            <a href="mixbag.html" class="button-class">Mix Bag </a>
+            <a href="form.html" class="button-class">Form</a>
+            <a href="index.html" class="button-class">Index</a>
+             <br> <br>
+             <button id="modeToggle" class="background-button"> Make Background Black</button> <br>
+             <script src="blackbackground.js"></script>  
+            <h1> Padding, Margin and Borders </h1>
+
+
+
+            <h3> Here we see padding and margin used on the background button class which is the grey button you see up top that changes light and dark modes </h3>
+            <!-- Prism.js Dark Theme -->
+            <link href="https://cdn.jsdelivr.net/npm/prismjs/themes/prism-tomorrow.css" rel="stylesheet" />
+            <script src="https://cdn.jsdelivr.net/npm/prismjs/prism.js"></script>
+            <script src="https://cdn.jsdelivr.net/npm/prismjs/components/prism-javascript.min.js"></script>
+
+            <!-- Code Block with Copy Button -->
+            <div style="position: relative; margin: 1em 0;">
+            <button onclick="copyCode(this)" style="
+            position: absolute; top: 10px; right: 10px;
+            background: #2d2d2d; color: white; border: none;
+            padding: 5px 10px; border-radius: 5px; cursor: pointer;
+            font-size: 0.8rem;
+            ">Copy</button>
+
+            <pre style="overflow-x: auto; border-radius: 10px;"><code class="language-javascript">
+                <script>
+                    .background-button {
+                        padding: 10px 20px; // 10 px on the left and right. 20px on the top and bottom. This is the space between the text and the outside of the button
+                        margin: .5em .5em .5em .5em; //Space around the button creates white space so everything isn't on top of another
+                        font-size: 16px;
+                        cursor: pointer; // changes mouse to a hand icon
+                      }
+                </script>
+            </code></pre>
+            </div>
+
+            <!-- Copy to Clipboard Script -->
+            <script>
+            function copyCode(btn) {
+            const code = btn.nextElementSibling.querySelector('code').innerText;
+            navigator.clipboard.writeText(code).then(() => {
+            btn.innerText = "Copied!";
+            setTimeout(() => btn.innerText = "Copy", 1500);
+            });
+            }
+            </script>
+
+
+            <!-- New example below -->
+
+
+
+            <h3>  This is an examples of borders being used also on the same button.  </h3>
+            <!-- Prism.js Dark Theme -->
+            <link href="https://cdn.jsdelivr.net/npm/prismjs/themes/prism-tomorrow.css" rel="stylesheet" />
+            <script src="https://cdn.jsdelivr.net/npm/prismjs/prism.js"></script>
+            <script src="https://cdn.jsdelivr.net/npm/prismjs/components/prism-javascript.min.js"></script>
+
+            <!-- Code Block with Copy Button -->
+            <div style="position: relative; margin: 1em 0;">
+            <button onclick="copyCode(this)" style="
+            position: absolute; top: 10px; right: 10px;
+            background: #2d2d2d; color: white; border: none;
+            padding: 5px 10px; border-radius: 5px; cursor: pointer;
+            font-size: 0.8rem;
+            ">Copy</button>
+
+            <pre style="overflow-x: auto; border-radius: 10px;"><code class="language-javascript">
+                <script>
+                    button{ // this is the type button it is applied to all button types unless you change what a specific button looks like with a class
+                        border-radius: 15px; // this curves the button as you see above
+                        box-shadow: 3px 3px 3px rgb(255, 7, 7); //this creates the cool look with the shadow and the green turning into
+                        border-color: green; // this is the base color so if there was no shaddow the whole border color would be green
+                    }
+                </script>
+            </code></pre>
+            </div>
+
+            <!-- Copy to Clipboard Script -->
+            <script>
+            function copyCode(btn) {
+            const code = btn.nextElementSibling.querySelector('code').innerText;
+            navigator.clipboard.writeText(code).then(() => {
+            btn.innerText = "Copied!";
+            setTimeout(() => btn.innerText = "Copy", 1500);
+            });
+            }
+            </script>
+
+        </nav>
+        <main>
+        </main>
+        <footer>
+        </footer>
+    </body>

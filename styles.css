@@ -1,0 +1,146 @@
+/*===========================================*\
+Headers
+\*===========================================*/
+h1 
+    {
+        border-width: 4px;
+        border-style: solid;
+        border-color: rgb(0, 0, 0);
+        font-family: Verdana;
+        font-size: 42px;
+        color: rgb(255, 255, 255);
+        text-align: center;
+        background-color: rgb(255, 43, 6);
+        
+    }
+    h2 
+    {
+        border-width: 2px;
+        border-style: solid;
+        border-color: black;
+        font-family: Verdana;
+        font-size: 22px;
+        text-align: center;
+        background-color: rgb(255, 43, 6);
+    }
+
+/*===========================================*\
+Buttons and Divs
+\*===========================================*/
+    
+.background-button {
+    padding: 10px 20px;
+    margin: .5em .5em .5em .5em;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  .button-class {
+        background-color: #4CAF50;
+        /* Green */
+        border: none;
+        color: white;
+        padding: 10px 20px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 4px 2px;
+        cursor: pointer;
+        border-radius: 4px;
+    }
+    button{
+        border-radius: 15px;
+        box-shadow: 3px 3px 3px rgb(255, 7, 7);
+        border-color: green;
+    }
+    .logo-button{
+        border-radius: 15px;
+        box-shadow: 3px 3px 3px rgb(77, 75, 75);
+        border-color: rgb(83, 79, 79);
+    }
+    .button-class:active {
+        background-color: rgb(33, 165, 103);
+    }
+    .button-class:hover {
+        background-color: aqua;
+        box-shadow: 10px 5px 5px grey;
+    }
+    a:visited {
+        color: purple;
+      }
+
+    .div1 {
+        display: inline-block;
+        border: 3px solid black;
+        border-radius: 50px 100px 10px;
+        padding-top: 5px;
+        padding-right: 20px;
+        padding-bottom: 5px;
+        padding-left: 20px;
+        background-color: aqua;
+    }
+    
+
+/*===========================================*\
+Tables
+\*===========================================*/
+    td {
+        text-align: center;
+    }
+
+    th, td {
+        border: 1px solid black;
+        padding: 5px;
+    }
+    table {
+        border-collapse: collapse;
+    }
+    tr:nth-child(even) {
+        background-color: rgb(151, 30, 30);
+    }
+    input:invalid + span::after {
+        content: '\2717';
+        color: red;
+    }
+
+/*===========================================*\
+Input
+\*===========================================*/
+    input:valid + span::after {
+        content: '\2713';
+        color: green;
+    }
+
+
+/*===========================================*\
+Font
+\*===========================================*/
+    .tip::before {
+        content: 'TIP';
+        display: block;
+        color: green;
+        font-size: 12px;
+    }
+    p::first-letter {
+       color: crimson;
+       font-size: 32px;
+    }
+    audio{
+        color:yellow;
+    }
+/*===========================================*\
+Color
+\*===========================================*/
+    body {
+        padding: 10px 20px;
+        font-size: 16px;
+        cursor: pointer;
+      }
+      
+      
+    
+
+
+
+
+    

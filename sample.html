@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel = "stylesheet" href="styles.css">
+  <title>Clickable Table Cell</title>
+  <style>
+    table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+    th, td {
+      border: 1px solid #ccc;
+      padding: 10px;
+      text-align: center;
+    }
+    td.button-cell {
+      
+      color: black;
+      cursor: pointer;
+    }
+    td.button-cell:hover {
+    }
+  </style>
+</head>
+<body>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Action</th>
+  </tr>
+  <tr>
+    <td>John Doe</td>
+    <td align='center'><form><input type=submit value="click me"></form></td>
+  </tr>
+  <tr>
+    <td>Jane Smith</td>
+    <td class="button-cell" onclick="newPage())">Info all around</td>
+  </tr>
+</table>
+        <script>
+            function newPage()
+            {
+                location.replace("chart.html")
+            }
+        </script>    
+</body>
+</html>

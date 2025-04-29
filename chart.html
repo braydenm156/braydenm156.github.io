@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Compare and Contrast Chart</title>
+  <link rel="stylesheet" href="styles01.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Compare and Contrast JavaScript and C++</h1>
+    <table>
+      <thead>
+        <tr>
+          <th>Aspect</th>
+          <th>Javascript</th>
+          <th>C++</th>
+          <th> Conclusion </th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Arithmetic Operators</td>
+          <td>+,++,-,--,*,/,%</td>
+          <td>+,++,-,--,*,/,%</td>
+          <td> Exactly the same, comparison operators are also the same. </td>
+        </tr>
+        <tr>
+          <td>Printing</td>
+          <td>document.write(); </td>
+          <td>cout<<""<<;</td>
+          <td> Quite different syntax but both acomplish the same task. </td>
+        </tr>
+        <tr>
+          <td>Declaring Variables + Constants</td>
+          <td>let interestRate = .06; const rateOfChange = .09;</td>
+          <td>int interestRate = .06; string name = "Brayden"; const int rateOfChange = .09;</td>
+          <td> JS uses the key word "let" to declare all variables including integers and strings. C++ needs to know if you are declaring an int or a string etc. Same with declaring constants</td>
+        </tr>
+        <tr>
+          <td>User input</td>
+          <td>prompt(string, default);</td>
+          <td>cin >> x;</td>
+          <td> Quite different syntax but both acomplish the same task. </td>
+        </tr>
+        <tr>
+          <td>Functions</td>
+          <td>function functionName(arguments)
+            {
+                JavaScript statements
+            }
+            call: functionName();
+          </td>
+          <td>functionName(arguments)
+            {
+              C++ statements
+            }
+            call: functionName();
+          </td>
+          <td> Similar except for JS needing to be lead with "function" </td>
+        </tr>
+        <tr>
+          <td>Anonymous Functions</td>
+          <td> const tipCost = function (preTip, tipPercent)
+            {
+                const tipResult = preTip * tipPercent;
+                return tipResult;
+            }
+            or 
+            ([arguments]) => {
+              JavaScript statements
+            }
+
+            call: tipCosr(preTipTotal, tipPercentage);
+      
+          </td>
+          <td>not common and not simple in c++
+          </td>
+          <td> Much easier and widely used in JS </td>
+        </tr>
+        <tr>
+          <td>Global Scope</td>
+          <td> Declare the variable outside any block or function.
+          </td>
+          <td>Same as JS
+          </td>
+          <td> Exactly the same </td>
+        </tr>
+        <tr>
+          <td>Recursive Functions</td>
+          <td> let counter = 0;
+            addOne();
+            function addOne() 
+            {
+                counter += 1;
+                if (confirm("counter is now " + counter + ". Add another one?")) 
+                {
+                    addOne();
+                }
+            }  
+            document.write("Counter ended up at " + counter);
+          </td>
+          <td>int addOne(int counter)
+            {
+                cout<< "Counter is currently: ";
+                cout << counter << endl;
+                char another;
+                cout<<"Add another one? (Y or N)"<< endl;
+                cin>> another;
+                if(another == 'Y')
+                {
+                   return addOne(counter + 1);
+                }
+                else
+                {
+                    return counter;
+                }
+            }  
+            int main()
+            {
+            int result = addOne(0);
+            cout<< result;
+            }
+          </td>
+          <td> As you can see by the length. JS much simpiler. </td>
+        </tr>
+        <tr>
+          <td>Objects/Classes</td>
+          <td> const objectName = 
+            {
+              propertyName1: value1,
+              propertyName2: value2,
+              …
+              propertyNameN: valueN
+            }
+          </td>
+          <td>int addOne(int counter)
+            class objectName()
+            {
+              propertyName1: value1;
+              propertyName2: value2;
+              …
+              propertyNameN: valueN;
+            }
+          </td>
+          <td> As you can see by the length. JS much simpiler. </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <script>
+    function newPage()
+    {
+        location.replace("chart.html")
+    }
+</script> 
+</body>
+</html>

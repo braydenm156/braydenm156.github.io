@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang = "en">
+    <head>
+        <meta charset = "utf-8">  
+        <title> Example 1 </title> 
+        <link rel = "stylesheet" href="styles.css">
+    </head>
+    <body>
+        <header>
+            <button type="button" class="logo-button">  
+                <a href="main.html" ><img src="logo.webp" alt = "sit logo" width="40" height="40"></a>
+            </button> 
+        </header>
+        <nav>
+            <a href="main.html" class="button-class">Home</a>
+            <a href="template.html" class="button-class">Template</a>
+            <a href="aboutMe.html" class="button-class">About Me</a>
+            <a href="https://csmajors.owls.plus" class="button-class">CS Majors </a>
+            <a href="mixbag.html" class="button-class">Mix Bag </a>
+            <a href="form.html" class="button-class">Form</a>
+            <a href="index.html" class="button-class">Index</a>
+             <br> <br>
+
+        </nav>
+        <main>
+            <button id="modeToggle" class="background-button"> Make Background Black</button> <br>  
+            <script src="blackbackground.js"></script> 
+            <h1>
+                Mixed Bag Javascript
+            </h1>
+                <p> Abstraction in JavaScript refers to the concept of hiding the complex implementation details of a process and providing a simpler interface for interacting with it. <br>
+                    This is usually achieved using functions, objects, or classes. <br>
+
+                    Here's an example of abstraction in JavaScript using a class to hide the complexity of creating and manipulating shapes. <br> <br>
+                </p>
+                <p> Polymorphism in JavaScript refers to the ability of different objects to respond to the same method call in a way that is appropriate to the object’s type. <br>
+                    This is typically achieved through inheritance and method overriding. <br>
+                    In JavaScript, polymorphism is commonly implemented using inheritance in classes, where a child class overrides a method of a parent class. <br> <br>
+               
+                    Let's create a scenario where we have a Shape class (parent class) and two subclasses: Circle and Rectangle. <br>
+                    Both subclasses will have their own implementation of the area() method, but they share a common interface, which demonstrates polymorphism. <br> <br>
+
+                </p>   
+                <p>
+                    Inheritance in JavaScript allows one class (child class) to inherit the properties and methods from another class (parent class). 
+                    This helps in code reusability and the organization of related classes. 
+                    In JavaScript, inheritance is typically achieved using the extends keyword. 
+                </p>  
+                
+            <script>
+                // Base class Shape
+                class Shape {
+                    constructor(name) 
+                    {
+                        this.name = name;
+                    }
+                
+                    // Abstract method to be implemented by subclasses
+                    area() 
+                    {
+                        throw new Error('Method "area()" must be implemented');
+                    }
+                
+                    // A method that is common to all shapes
+                    display() 
+                    {
+                        document.write(`This is a ${this.name}`, "<br>");
+                    }
+                }
+                
+                // Subclass Circle
+                class Circle extends Shape 
+                {
+                    constructor(radius) 
+                    {
+                        super('Circle');
+                        this.radius = radius;
+                    }
+                
+                    // Implement the area method for Circle
+                    area() 
+                    {
+                        return Math.PI * this.radius * this.radius;
+                    }
+                }
+                
+                // Subclass Rectangle
+                class Rectangle extends Shape 
+                {
+                    constructor(width, height) 
+                    {
+                        super('Rectangle');
+                        this.width = width;
+                        this.height = height;
+                    }
+                
+                    // Implement the area method for Rectangle
+                    area() 
+                    {
+                        return this.width * this.height;
+                    }
+                }
+                
+                // Using the abstraction -- circle.area and rectangle.area is so simple to someone reading your code. The complexity is "hidden" inside a class.
+                const circle = new Circle(5);
+                circle.display(); // Output: This is a Circle
+                document.write('Area of Circle:', circle.area(), "<br>"); // Output: Area of Circle: 78.53981633974483
+                
+                const rectangle = new Rectangle(10, 4);
+                rectangle.display(); // Output: This is a Rectangle
+                document.write('Area of Rectangle:', rectangle.area(), "<br>"); // Output: Area of Rectangle: 40
+                
+            </script>
+            <a href="mixbag.html" class="button-class">Previous</a> 
+            <a href="encapsulation.html" class="button-class">Next</a>   
+            <!-- Prism.js Dark Theme -->
+            <link href="https://cdn.jsdelivr.net/npm/prismjs/themes/prism-tomorrow.css" rel="stylesheet" />
+            <script src="https://cdn.jsdelivr.net/npm/prismjs/prism.js"></script>
+            <script src="https://cdn.jsdelivr.net/npm/prismjs/components/prism-javascript.min.js"></script>
+
+            <!-- Code Block with Copy Button -->
+            <div style="position: relative; margin: 1em 0;">
+            <button onclick="copyCode(this)" style="
+            position: absolute; top: 10px; right: 10px;
+            background: #2d2d2d; color: white; border: none;
+            padding: 5px 10px; border-radius: 5px; cursor: pointer;
+            font-size: 0.8rem;
+            ">Copy</button>
+
+            <pre style="overflow-x: auto; border-radius: 10px;"><code class="language-javascript">
+                <script>
+                    // Base class Shape
+                    class Shape {
+                        constructor(name) 
+                        {
+                            this.name = name;
+                        }
+                    
+                        // Abstract method to be implemented by subclasses
+                        area() 
+                        {
+                            throw new Error('Method "area()" must be implemented');
+                        }
+                    
+                        // A method that is common to all shapes
+                        display() 
+                        {
+                            document.write(`This is a ${this.name}`, "<br>");
+                        }
+                    }
+                    
+                    // Subclass Circle
+                    class Circle extends Shape 
+                    {
+                        constructor(radius) 
+                        {
+                            super('Circle');
+                            this.radius = radius;
+                        }
+                    
+                        // Implement the area method for Circle
+                        area() 
+                        {
+                            return Math.PI * this.radius * this.radius;
+                        }
+                    }
+                    
+                    // Subclass Rectangle
+                    class Rectangle extends Shape 
+                    {
+                        constructor(width, height) 
+                        {
+                            super('Rectangle');
+                            this.width = width;
+                            this.height = height;
+                        }
+                    
+                        // Implement the area method for Rectangle
+                        area() 
+                        {
+                            return this.width * this.height;
+                        }
+                    }
+                    
+                    // Using the abstraction -- circle.area and rectangle.area is so simple to someone reading your code. The complexity is "hidden" inside a class.
+                    const circle = new Circle(5);
+                    circle.display(); // Output: This is a Circle
+                    document.write('Area of Circle:', circle.area(), "<br>"); // Output: Area of Circle: 78.53981633974483
+                    
+                    const rectangle = new Rectangle(10, 4);
+                    rectangle.display(); // Output: This is a Rectangle
+                    document.write('Area of Rectangle:', rectangle.area(), "<br>"); // Output: Area of Rectangle: 40
+                    
+                </script>
+            </code></pre>
+            </div>
+
+            <!-- Copy to Clipboard Script -->
+            <script>
+            function copyCode(btn) {
+            const code = btn.nextElementSibling.querySelector('code').innerText;
+            navigator.clipboard.writeText(code).then(() => {
+            btn.innerText = "Copied!";
+            setTimeout(() => btn.innerText = "Copy", 1500);
+            });
+            }
+            </script>
+            <a href="mixbag.html" class="button-class">Previous</a> 
+            <a href="encapsulation.html" class="button-class">Next</a> 
+
+        </main>
+        <footer>
+        </footer>
+    </body>

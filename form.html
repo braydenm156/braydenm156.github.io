@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang = "en">
+    <head>
+        <meta charset = "utf-8">  
+        <title> Forms </title> 
+        <link rel = "stylesheet" href="styles.css">
+    </head>
+    <body>
+        <header>
+            <button type="button" class="logo-button">  
+                <a href="main.html" ><img src="logo.webp" alt = "sit logo" width="40" height="40"></a>
+            </button> 
+        </header>
+        <nav>
+            <a href="main.html" class="button-class">Home</a>
+            <a href="template.html" class="button-class">Template</a>
+            <a href="aboutMe.html" class="button-class">About Me</a>
+            <a href="https://csmajors.owls.plus" class="button-class">CS Majors </a>
+            <a href="mixbag.html" class="button-class">Mix Bag </a>
+            <a href="form.html" class="button-class">Form</a>
+            <a href="index.html" class="button-class">Index</a>
+             <br> <br>
+
+        </nav>
+        <main>
+        </main>
+        <button id="modeToggle" class="background-button"> Make Background Black</button> <br> 
+            <script src="blackbackground.js"></script> 
+            <h2> Fill out my Form for more Info </h2>
+            <form role="search">
+                Your search controls go here
+            </form>
+            <form>
+                <input type="text" name="company" size="50"> <br> <br>
+                <input type="number" name="points" value="100"> <br> <br>
+                <input type="range" name="transparency" min="0" max="100" value="100"> <br> <br>
+                <label>
+                    Email:
+                    <input type="email" name="user-email" placeholder="you@yourdomain.com" required> <br> <br>
+                </label>    
+                <input type="url" name="homepage" placeholder="e.g., http://domain.com/"> <br> <br>
+                <input type="tel" name="mobile" placeholder="(xxx)xxx-xxxx"> <br> <br>
+                <input type="time" name="start-time"> <br> <br>
+                <input type="password" name="userpassword" autocomplete="current-password"> <br> <br>
+                <input type="search" name="q" placeholder="Type a search term"> <br> <br>
+                <textarea name="message" rows="5"> Default text goes here. </textarea>
+                <fieldset>
+                    <legend>
+                        What's your phobia? (Please check all that apply):
+                    </legend>
+                    <label>
+                        <input type="checkbox" name="phobia" value="Ants">Myrmecophobia (Fear of ants)
+                    </label>
+                    <label>
+                        <input type="checkbox" name="phobia" value="Bald">Peladophobia (Fear of becoming bald)
+                    </label>
+                    <label>
+                        <input type="checkbox" name="phobia" value="Beards" checked>Pogonophobia (Fear of beards)
+                    </label>
+                    <label>
+                        <input type="checkbox" name="phobia" value="Bed">Clinophobia (Fear of going to bed)
+                    </label>
+                    <label>
+                        <input type="checkbox" name="phobia" value="Chins" checked>Geniophobia (Fear of chins)
+                    </label>
+                    <label>
+                        <input type="checkbox" name="phobia" value="Flowers">Anthophobia (Fear of flowers)
+                    </label>
+                    <label>
+                        <input type="checkbox" name="phobia" value="Flying">Aviatophobia (Fear of flying)
+                    </label>
+                    <label>
+                        <input type="checkbox" name="phobia" value="Purple">Porphyrophobia (Fear of purple)
+                    </label>
+                    <label>
+                        <input type="checkbox" name="phobia" value="Teeth" checked>Odontophobia (Fear of teeth)
+                    </label>
+                    <label>
+                        <input type="checkbox" name="phobia" value="Thinking">Phronemophobia (Fear of thinking)
+                    </label>
+                    <label>
+                        <input type="checkbox" name="phobia" value="Vegetables">Lachanophobia (Fear of vegetables)
+                    </label>
+                    <label>
+                        <input type="checkbox" name="phobia" value="Fear" checked>Phobophobia (Fear of fear)
+                    </label>
+                    <label>
+                        <input type="checkbox" name="phobia" value="Everything">Pantophobia (Fear of everything)
+                    </label>
+                </fieldset> <br> <br>
+                <fieldset>
+                    <legend>
+                        Select a delivery method
+                    </legend>
+                    <div>
+                        <input type="radio" id="carrier-pigeon" name="delivery" value="pigeon" checked>
+                        <label for="carrier-pigeon">Carrier pigeon</label>
+                    </div>
+                    <div>
+                        <input type="radio" id="pony-express" name="delivery" value="pony">
+                        <label for="pony-express">Pony express</label>
+                    </div>
+                    <div>
+                        <input type="radio" id="snail-mail" name="delivery" value="postal">
+                        <label for="snail-mail">Snail mail</label>
+                    </div>
+                    <div>
+                        <input type="radio" id="some-punk" name="delivery" value="bikecourier">
+                        <label for="some-punk">Some punk on a bike</label>
+                    </div>
+                </fieldset> <br> <br>
+                <div>
+                    <label for="hair-color">Select your hair color:</label><br>
+                    <select id="hair-color" name="hair-color">
+                        <option value="black">Black</option>
+                        <option value="blonde">Blonde</option>
+                        <option value="brunette" selected>Brunette</option>
+                        <option value="red">Red</option>
+                        <option value="neon">Something neon</option>
+                        <option value="none">None</option>
+                    </select>
+                </div> <br> <br>
+                <input type="color" name="bg-color" value="#4f5392"> <br> <br>
+                <input type="date" name="appt-date" value="2023-08-23"> <br> <br>
+                <input type="file" name="user-photo"> <br> <br>
+                <input id="userSession" name="user-session" type="hidden" value="jwr274"> <br> <br>
+                <button type="submit">Submit</button>
+            </form>
+            
+            
+            <div id="output">
+            </div>
+    
+            <script>
+                const string1 = prompt("Enter favorite foods separated by commas");
+                const string2 = prompt("Enter favorite music artists separted by commas");
+                let str = "";
+                
+                const string1Array = string1.split(",");
+                string1Array.forEach((value, index) => {
+                    str += `string1Array[${index}] = ${value}<br>`;
+                });
+                
+                const string2Array = string2.split(",");
+                string2Array.forEach ((value, index) => {
+                    str += `string2Array[${index}] = ${value}<br>`;
+                });
+                
+                document.getElementById("output").innerHTML = str;
+            </script>    
+        <footer>
+        </footer>
+    </body>

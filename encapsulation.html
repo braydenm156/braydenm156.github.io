@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang = "en">
+    <head>
+        <meta charset = "utf-8">  
+        <title> Encapsulation Example 2 </title> 
+        <link rel = "stylesheet" href="styles.css">
+    </head>
+    <body>
+        <header>
+          <button type="button" class="logo-button">  
+            <a href="main.html" ><img src="logo.webp" alt = "sit logo" width="40" height="40"></a>
+        </button> 
+        </header>
+        <nav>
+            <a href="main.html" class="button-class">Home</a>
+            <a href="template.html" class="button-class">Template</a>
+            <a href="aboutMe.html" class="button-class">About Me</a>
+            <a href="https://csmajors.owls.plus" class="button-class">CS Majors </a>
+            <a href="mixbag.html" class="button-class">Mix Bag </a>
+            <a href="form.html" class="button-class">Form</a>
+            <a href="index.html" class="button-class">Index</a>
+             <br> <br>
+
+        </nav>
+        <main>
+          <button id="modeToggle" class="background-button"> Make Background Black</button> <br> 
+            <script src="blackbackground.js"></script> 
+            <h1>
+                Mixed Bag Javascript
+            </h1>
+                <p> Encapsulation in JavaScript refers to the concept of bundling data (variables) and methods (functions) that operate on the data into a single unit, typically inside a class. <br>
+                    This is done to restrict access to certain parts of the object and protect its integrity by hiding its internal state (using private variables) and only allowing controlled access to the data. <br> <br>
+
+                    We'll create a Person class that encapsulates a person's name and age. The name and age will be private and can only be accessed or modified through getter and setter methods.
+                </p> 
+            <script>
+                class Person 
+                {
+                    // Private properties using the new # syntax
+                    #name;
+                    #age;
+                  
+                    constructor(name, age) 
+                    {
+                      this.#name = name;  // Private field
+                      this.#age = age;    // Private field
+                    }
+                  
+                    // Getter method for name
+                    getName() 
+                    {
+                      return this.#name;
+                    }
+                  
+                    // Setter method for name
+                    setName(name) 
+                    {
+                      if (name && name.length > 0) 
+                      {
+                        this.#name = name;
+                      } 
+                      else 
+                      {
+                        document.write('Invalid name');
+                      }
+                    }
+                  
+                    // Getter method for age
+                    getAge() {
+                      return this.#age;
+                    }
+                  
+                    // Setter method for age
+                    setAge(age) {
+                      if (age > 0 && age < 130) { // Simple validation
+                        this.#age = age;
+                      } else {
+                        document.write('Invalid age');
+                      }
+                    }
+                  
+                    // Method to display person's details
+                    displayPersonInfo() 
+                    {
+                      document.write("<br>", `Name: ${this.#name}`," ", `Age: ${this.#age}`, "<br>");
+                    }
+                  }
+                  
+                  // Using the Person class
+                  const person1 = new Person('John', 30);
+                  
+                  // Accessing data using getter methods
+                  document.write(person1.getName(), "<br>");  // Output: John
+                  document.write(person1.getAge(), "<br>");   // Output: 30
+                  
+                  // Modifying data using setter methods
+                  person1.setName('Alice');
+                  person1.setAge(25);
+                  
+                  // Display updated information
+                  person1.displayPersonInfo();  // Output: Name: Alice, Age: 25
+                  
+                  // Trying to access private fields directly (will throw an error)
+                  //document.write(person1.#name);  // SyntaxError: Private field '#name' must be declared in an enclosing class
+                  
+            </script> 
+            <a href="abstractionpolyinheritance.html" class="button-class">Previous </a> 
+            <!-- Prism.js Dark Theme -->
+            <link href="https://cdn.jsdelivr.net/npm/prismjs/themes/prism-tomorrow.css" rel="stylesheet" />
+            <script src="https://cdn.jsdelivr.net/npm/prismjs/prism.js"></script>
+            <script src="https://cdn.jsdelivr.net/npm/prismjs/components/prism-javascript.min.js"></script>
+
+            <!-- Code Block with Copy Button -->
+            <div style="position: relative; margin: 1em 0;">
+              <button onclick="copyCode(this)" style="
+                position: absolute; top: 10px; right: 10px;
+                background: #2d2d2d; color: white; border: none;
+                padding: 5px 10px; border-radius: 5px; cursor: pointer;
+                font-size: 0.8rem;
+              ">Copy</button>
+
+              <pre style="overflow-x: auto; border-radius: 10px;"><code class="language-javascript">
+                <script>
+                  class Person 
+                  {
+                      // Private properties using the new # syntax
+                      #name;
+                      #age;
+                    
+                      constructor(name, age) 
+                      {
+                        this.#name = name;  // Private field
+                        this.#age = age;    // Private field
+                      }
+                    
+                      // Getter method for name
+                      getName() 
+                      {
+                        return this.#name;
+                      }
+                    
+                      // Setter method for name
+                      setName(name) 
+                      {
+                        if (name && name.length > 0) 
+                        {
+                          this.#name = name;
+                        } 
+                        else 
+                        {
+                          document.write('Invalid name');
+                        }
+                      }
+                    
+                      // Getter method for age
+                      getAge() {
+                        return this.#age;
+                      }
+                    
+                      // Setter method for age
+                      setAge(age) {
+                        if (age > 0 && age < 130) { // Simple validation
+                          this.#age = age;
+                        } else {
+                          document.write('Invalid age');
+                        }
+                      }
+                    
+                      // Method to display person's details
+                      displayPersonInfo() 
+                      {
+                        document.write("<br>", `Name: ${this.#name}`," ", `Age: ${this.#age}`, "<br>");
+                      }
+                    }
+                    
+                    // Using the Person class
+                    const person1 = new Person('John', 30);
+                    
+                    // Accessing data using getter methods
+                    document.write(person1.getName(), "<br>");  // Output: John
+                    document.write(person1.getAge(), "<br>");   // Output: 30
+                    
+                    // Modifying data using setter methods
+                    person1.setName('Alice');
+                    person1.setAge(25);
+                    
+                    // Display updated information
+                    person1.displayPersonInfo();  // Output: Name: Alice, Age: 25
+                    
+                    // Trying to access private fields directly (will throw an error)
+                    //document.write(person1.#name);  // SyntaxError: Private field '#name' must be declared in an enclosing class
+                    
+              </script>
+              </code></pre>
+            </div>
+
+            <!-- Copy to Clipboard Script -->
+            <script>
+            function copyCode(btn) {
+              const code = btn.nextElementSibling.querySelector('code').innerText;
+              navigator.clipboard.writeText(code).then(() => {
+                btn.innerText = "Copied!";
+                setTimeout(() => btn.innerText = "Copy", 1500);
+              });
+            }
+            </script>
+            <a href="abstractionpolyinheritance.html" class="button-class">Previous </a> 
+        </main>
+        <footer>
+        </footer>
+    </body>
