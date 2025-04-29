@@ -11,6 +11,7 @@ h1
         color: rgb(255, 255, 255);
         text-align: center;
         background-color: rgb(255, 43, 6);
+        padding: 3px 3px 3px 3px;
         
     }
     h2 
@@ -27,7 +28,7 @@ h1
 /*===========================================*\
 Buttons and Divs
 \*===========================================*/
-    
+
 .background-button {
     padding: 10px 20px;
     margin: .5em .5em .5em .5em;
@@ -65,9 +66,9 @@ Buttons and Divs
         background-color: aqua;
         box-shadow: 10px 5px 5px grey;
     }
-    a:visited {
+    /* a:visited {
         color: purple;
-      }
+      } */
 
     .div1 {
         display: inline-block;

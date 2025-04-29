@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang = "en">
+    <head>
+        <meta charset = "utf-8">  
+        <title> Selectors </title> 
+        <link rel = "stylesheet" href="styles.css">
+    </head>
+    <body>
+        <header>
+            <button type="button" class="logo-button">  
+                <a href="main.html" ><img src="logo.webp" alt = "sit logo" width="40" height="40"></a>
+            </button> 
+        </header>
+        <nav>
+            <a href="main.html" class="button-class">Home</a>
+            <a href="template.html" class="button-class">Template</a>
+            <a href="aboutMe.html" class="button-class">About Me</a>
+            <a href="https://csmajors.owls.plus" class="button-class">CS Majors </a>
+            <a href="mixbag.html" class="button-class">Mix Bag </a>
+            <a href="form.html" class="button-class">Form</a>
+            <a href="index.html" class="button-class">Index</a>
+             <br> <br>
+             <button id="modeToggle" class="background-button"> Make Background Black</button> <br>
+             <script src="blackbackground.js"></script>  
+            
+
+
+                <h1> Selectors: class, id, universal </h1>
+
+
+
+                <h3> This example shows how I used a selector id and class </h3>
+                <!-- Prism.js Dark Theme -->
+                <link href="https://cdn.jsdelivr.net/npm/prismjs/themes/prism-tomorrow.css" rel="stylesheet" />
+                <script src="https://cdn.jsdelivr.net/npm/prismjs/prism.js"></script>
+                <script src="https://cdn.jsdelivr.net/npm/prismjs/components/prism-javascript.min.js"></script>
+    
+                <!-- Code Block with Copy Button -->
+                <div style="position: relative; margin: 1em 0;">
+                <button onclick="copyCode(this)" style="
+                position: absolute; top: 10px; right: 10px;
+                background: #2d2d2d; color: white; border: none;
+                padding: 5px 10px; border-radius: 5px; cursor: pointer;
+                font-size: 0.8rem;
+                ">Copy</button>
+    
+                <pre style="overflow-x: auto; border-radius: 10px;"><code class="language-javascript">
+                    <script>
+
+                        //the html for the button with the class and id selector
+                        <button id="modeToggle" class="background-button"> Make Background Black</button> 
+
+                        //the css for the class selector
+                        .background-button {
+                            padding: 10px 20px; // 10 px on the left and right. 20px on the top and bottom. This is the space between the text and the outside of the button
+                            margin: .5em .5em .5em .5em; //Space around the button creates white space so everything isn't on top of another
+                            font-size: 16px;
+                            cursor: pointer; // changes mouse to a hand icon
+                          }
+
+
+
+                        //the javascript for the id selector (id can also be used for css similar to class but using a #id instead of a .id in the css sheet) Id's should be used once while classes are meant to encompass as monay elements as you need
+                        function init() {
+                            const savedMode = localStorage.getItem('background') || 'light'; //checks to see if thers a saved mode in localStorage under the key background, if there is not it defaults to light.
+                            applyMode(savedMode); //applys the saved mode that is in storage. this is for when you are switching pages on your site and want to keep the background you had before.
+                            document.getElementById('modeToggle').addEventListener('click', toggleMode);//when the button is clicked it runs the toggleMode() function which changes the modes which then calls the apply to apply the change in the mode.
+                          }
+                          
+                          //you can see the document model using getElementById() to select the specefic button that needs to be addressed in this function
+                    </script>
+                </code></pre>
+                </div>
+    
+                <!-- Copy to Clipboard Script -->
+                <script>
+                    function copyCode(btn) {
+                    const code = btn.nextElementSibling.querySelector('code').innerText;
+                    navigator.clipboard.writeText(code).then(() => {
+                    btn.innerText = "Copied!";
+                    setTimeout(() => btn.innerText = "Copy", 1500);
+                    });
+                    } 
+                </script>
+
+
+
+                <!--New Example Below-->
+
+
+                <h3> This example shows how to use a universal selector. I did not use one while making my site </h3>
+                <!-- Prism.js Dark Theme -->
+                <link href="https://cdn.jsdelivr.net/npm/prismjs/themes/prism-tomorrow.css" rel="stylesheet" />
+                <script src="https://cdn.jsdelivr.net/npm/prismjs/prism.js"></script>
+                <script src="https://cdn.jsdelivr.net/npm/prismjs/components/prism-javascript.min.js"></script>
+    
+                <!-- Code Block with Copy Button -->
+                <div style="position: relative; margin: 1em 0;">
+                <button onclick="copyCode(this)" style="
+                position: absolute; top: 10px; right: 10px;
+                background: #2d2d2d; color: white; border: none;
+                padding: 5px 10px; border-radius: 5px; cursor: pointer;
+                font-size: 0.8rem;
+                ">Copy</button>
+    
+                <pre style="overflow-x: auto; border-radius: 10px;"><code class="language-javascript">
+                    <script>
+
+                       //css 
+                       * {
+                            font-family: Arial, sans-serif;
+                         }
+
+                      //the * indicates a universal selector
+                      //All elements will use the ARial font according to that universal selector
+                    </script>
+                </code></pre>
+                </div>
+    
+                <!-- Copy to Clipboard Script -->
+                <script>
+                    function copyCode(btn) {
+                    const code = btn.nextElementSibling.querySelector('code').innerText;
+                    navigator.clipboard.writeText(code).then(() => {
+                    btn.innerText = "Copied!";
+                    setTimeout(() => btn.innerText = "Copy", 1500);
+                    });
+                    } 
+                </script>
+        </nav>
+        <main>
+        </main>
+        <footer>
+        </footer>
+    </body>

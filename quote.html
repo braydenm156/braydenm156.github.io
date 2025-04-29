@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Random Quote App</title>
+  <link rel = "stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <button type="button" class="logo-button">  
+            <a href="main.html" ><img src="logo.webp" alt = "sit logo" width="40" height="40"></a>
+        </button> 
+    </header>
+    <nav>
+        <a href="main.html" class="button-class">Home</a>
+        <a href="template.html" class="button-class">Template</a>
+        <a href="aboutMe.html" class="button-class">About Me</a>
+        <a href="https://csmajors.owls.plus" class="button-class">CS Majors </a>
+        <a href="mixbag.html" class="button-class">Mix Bag </a>
+        <a href="form.html" class="button-class">Form</a>
+        <a href="index.html" class="button-class">Index</a>
+         <br> <br>
+         <button id="modeToggle" class="background-button"> Make Background Black</button> <br>
+         <script src="blackbackground.js"></script> 
+    </nav>
+    <main>
+        
+        <h1 id="title">Click the button to get a quote!</h1>
+        <button id="quoteButton">Get Quote</button>
+
+        <script>
+        // Variables
+        const quotes = [
+            "Believe in yourself!",
+            "You can do it!",
+            "Never give up!",
+            "Stay positive!",
+            "Work hard, dream big!"
+        ];
+
+        // Function
+        function getRandomQuote() {
+            // Expression: pick a random index
+            const randomIndex = Math.floor(Math.random() * quotes.length);
+            
+            // Document Object Model (DOM) update
+            document.getElementById("title").textContent = quotes[randomIndex];
+        }
+
+        // Event listener
+        document.getElementById("quoteButton").addEventListener("click", getRandomQuote);
+        </script>
+    </main>
+</body>
+</html>
